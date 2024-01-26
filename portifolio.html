@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="portifolio.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio.</a>
+
+        <nav class="navbar">
+
+            <a href="#" style="--i:1;" class="active">Home</a>
+            <a href="index.html" style="--i:2;">Sobre</a>   
+            <a id="link1"href="#" style="--i:3;">Habilidade</a>
+            <a id="link2"href="#" style="--i:4;">Projetos</a>
+            <a href="contato.html" target="_blank" style="--i:5;">Contato</a>
+            
+        </nav>
+    </header>
+    
+    <section class="home">
+        <div class="home-content">
+            <h3>Ola, Me chamo</h3>
+            <h1>Kayque Lopes</h1>
+            <h3>Eu sou um <span class="multiple-text"></span></h3>
+            <p>Sou apaixonado por tecnologia e estou dedicado a aprimorar meus conhecimentos diariamente, explorando diversas tecnologias presentes no mercado. Se houver interesse, sinta-se à vontade para entrar em contato.
+            </p>
+            <div class="midia-social">
+                <a href="https://www.instagram.com/kayque_lp/" target="_blank" style="--i:7;"><i class='bx bxl-instagram'></i></a>
+                <a href="https://twitter.com/LpKayque" target="_blank" style="--i:8;"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://github.com/kayquelp" target="_blank" style="--i:9;"><i class='bx bxl-github' ></i></a>
+            </div>
+            <a href="#" class="btn">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="image/notebook_roxo.png" alt="">
+        </div>
+    </section>
+    <div class="skills">
+        <h2>Skills</h2>
+    </div>
+    
+    <div class="wrapper">
+        <div class="card">
+          <div class="circle">
+            <div class="bar"></div>
+            <div class="box"><span></span></div>
+          </div>
+          <div class="text">HTML & CSS</div>
+        </div>
+        <div class="card js">
+          <div class="circle">
+            <div class="bar"></div>
+            <div class="box"><span></span></div>
+          </div>
+          <div class="text">JavaScript</div>
+        </div>
+        <div class="card python">
+          <div class="circle">
+            <div class="bar"></div>
+            <div class="box"><span></span></div>
+          </div>
+          <div class="text">Python</div>
+        </div>
+        <div class="card java">
+            <div class="circle">
+              <div class="bar"></div>
+              <div class="box"><span></span></div>
+            </div>
+            <div class="text">Java</div>
+          </div>
+          <div class="card C">
+            <div class="circle">
+              <div class="bar"></div>
+              <div class="box"><span></span></div>
+            </div>
+            <div class="text">C</div>
+          </div>
+          <div class="card php">
+            <div class="circle">
+              <div class="bar"></div>
+              <div class="box"><span></span></div>
+            </div>
+            <div class="text">PHP</div>
+          </div>
+  </div>
+
+      <script>
+        let options = {
+          startAngle: -1.55,
+          size: 150,
+          value: 0.85,
+          fill: {gradient: ['#5b0197', '#fa4299']}
+        }
+        $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+        function(event, progress, stepValue){
+          $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+        });
+        $(".js .bar").circleProgress({
+          value: 0.50
+        });
+        $(".python .bar").circleProgress({
+          value: 0.35
+        });
+        $(".java .bar").circleProgress({
+          value: 0.10
+        });
+        $(".C .bar").circleProgress({
+          value: 0.05
+        });
+        $(".php .bar").circleProgress({
+          value: 0.15
+        });
+
+    </script>
+
+    <style>
+      .img {
+        height: 330px;
+        width: 590px;
+      }
+    </style>
+
+<div class="projetos">
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">últimos <span>Projetos</span></h2>
+
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img src="image/Opera Instantâneo_2023-09-28_200418_127.0.0.1.png" class="img" alt="">
+          <div class="portfolio-layer">
+            <h4>Academia</h4>
+            <p>Um site de academia simples
+            </p>
+            <a href="#"><i class="ri-external-link-line"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="image/martin-martz-X5fEKadz0Xc-unsplash.jpg" class="img" alt="">
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam animi aliquam explicabo temporibus rerum? 
+            </p>
+            <a href="#"><i class="ri-external-link-line"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="image/martin-martz-X5fEKadz0Xc-unsplash.jpg" class="img"  alt="">
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam animi aliquam explicabo temporibus rerum? 
+            </p>
+            <a href="#"><i class="ri-external-link-line"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="image/martin-martz-X5fEKadz0Xc-unsplash.jpg" class="img"  alt="">
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam animi aliquam explicabo temporibus rerum? 
+            </p>
+            <a href="image/martin-martz-X5fEKadz0Xc-unsplash.jpg"><i class="ri-external-link-line"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="image/martin-martz-X5fEKadz0Xc-unsplash.jpg" class="img" alt="">
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam animi aliquam explicabo temporibus rerum? 
+            </p>
+            <a href="#"><i class="ri-external-link-line"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="image/martin-martz-X5fEKadz0Xc-unsplash.jpg" class="img" alt="">
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam animi aliquam explicabo temporibus rerum? 
+            </p>
+            <a href="#"><i class="ri-external-link-line"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">Trabalho</a></li>
+              <li><a href="#">Parceria</a></li>
+              <li><a href="#">Network</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Sobre</h4>
+            <ul>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Canais</a></li>
+              <li><a href="#">Parcerias</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <ul>
+              <li><a href="#">Contate-me</a></li>
+              <li><a href="#">Politica de Privacidade</a></li>
+              <li><a href="#">Termos & Condições</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Siga Me</h4>
+            <div class="social-links">
+              <a href="https://www.instagram.com/kayque_lp/" target="_blank"><i class="ri-instagram-line"></i></a>
+              <a href="https://twitter.com/LpKayque" target="_blank"><i class="ri-twitter-line"></i></a>
+              <a href="https://github.com/kayquelp" target="_blank"><i class="ri-github-line"></i></a>
+              <a href="https://www.linkedin.com/in/kayque-lopes-undefined-2aa364290/" target="_blank"><i class="ri-linkedin-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright">
+      Copyright © 2023 Kayque. Todos os Direitos Reservados
+    </div>
+
+
+
+
+
+
+    
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="portifolio.js"></script>
+
+</body>
+</html>
